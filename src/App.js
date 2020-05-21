@@ -8,6 +8,7 @@ import {
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 import Dashboard from './components/Dashboard';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
           </Route>
           <Route path="/login">
             <Login />

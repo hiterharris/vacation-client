@@ -1,5 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
 .Home h1 {
   text-align: center;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Nav .nav-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.Nav .nav-left a {
+  width: 15%;
+}
+.Nav .nav-left a img {
+  width: 100%;
+}
+.Nav .nav-left h1 {
+  font-family: "Playball", cursive;
+  font-size: 48px;
+}
+.Nav .nav-right {
+  width: 50%;
+}
+.Nav .nav-right ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.Nav .nav-right ul li {
+  margin: 0% 1%;
 }
 
 /*# sourceMappingURL=App.css.map */

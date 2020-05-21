@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+.Nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        a {
+            width: 15%;
+            img {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            font-family: 'Playball', cursive;
+            font-size: 48px;
+        }
+    }
+
+    .nav-right {
+        width: 50%;
+        
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+    
+            li {
+                margin: 0% 1%;
+            }
+        }
+    }
+}
