@@ -32,4 +32,28 @@
   margin: 0% 1%;
 }
 
+.SignUp {
+  text-align: center;
+}
+.SignUp form {
+  display: flex;
+  flex-direction: column;
+}
+.SignUp form .input {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  margin: 1%;
+}
+.SignUp form .input input {
+  width: 20%;
+  height: 40px;
+}
+.SignUp form button {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+}
+
 /*# sourceMappingURL=App.css.map */

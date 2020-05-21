@@ -1,0 +1,27 @@
+.SignUp {
+    text-align: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-items: center;
+            margin: 1%;
+            
+            input {
+                width: 20%;
+                height: 40px;
+            }
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    }
+}
