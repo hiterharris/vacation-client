@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
-.Home h1 {
-  text-align: center;
-}
-
 .Nav {
   display: flex;
   align-items: center;
@@ -22,6 +18,7 @@
 .Nav .nav-left h1 {
   font-family: "Playball", cursive;
   font-size: 48px;
+  margin: 0% 5%;
 }
 .Nav .nav-right {
   width: 50%;
