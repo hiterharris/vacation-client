@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import './App.css';
 
+import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
@@ -15,21 +15,8 @@ import Dashboard from './components/Dashboard';
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-          </ul>
-        </nav>
-
+      {/* <div> */}
+        <Nav />
         <Switch>
           <Route path="/dashboard">
             <Dashboard />
@@ -41,7 +28,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      {/* </div> */}
     </Router>
   );
 }
