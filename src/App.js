@@ -4,18 +4,15 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import './App.css';
 
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 
-
 function App() {
   return (
     <Router>
-      {/* <div> */}
         <Nav />
         <Switch>
           <Route path="/dashboard">
@@ -28,7 +25,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      {/* </div> */}
     </Router>
   );
 }

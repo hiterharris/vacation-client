@@ -6,7 +6,7 @@ import {
 
 function Nav() {
   return (
-    <nav>
+    <nav className='Nav'>
         <ul>
         <li>
             <Link to="/">Home</Link>
