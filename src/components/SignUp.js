@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/signup.scss';
@@ -18,18 +18,27 @@ function SignUp(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios
+		axios
       .post('http://localhost:3001/api/auth/register', newUser)
-        .then(response => {
-          console.log(response);
-        })
+      .then(response => {
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('id', response.data.id);
+        localStorage.setItem('username', response.data.username);
+        console.log(response.data);
+        setTimeout(() => {
+          history.push("/login");
+        }, 500);
+      })
+      .catch(error => {
+        console.log(error)
+      });
+    routeToSignIn();
   }
 
   const history = useHistory()
   const routeToSignIn = () => {
       history.push('/login')
   }
-
 
   return (
     <div className="SignUp">
@@ -56,7 +65,7 @@ function SignUp(props) {
         </div>
 
         <div>
-            <button onClick={routeToSignIn} type='submit'>Sign Up</button>
+            <button onClick={handleSubmit} type='submit'>Sign Up</button>
         </div>
 
       </form>
