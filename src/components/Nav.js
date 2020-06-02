@@ -29,7 +29,7 @@ function Nav() {
     }
 
     const signUpButton = () => {
-        if (localStorage.token) {
+        if (!localStorage.token) {
         return <button onClick={() => history.push('/signup')}>Sign Up</button> ;
         } else {
         return null;

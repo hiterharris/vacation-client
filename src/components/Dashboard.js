@@ -32,7 +32,7 @@ function Dashboard() {
             <div></div>
           </div>
         </Link>
-        <Link className='link' to="">
+        <Link className='link' to="/food">
           <div className='dashboard-card'>
             <h2>Food</h2>
             <div></div>
