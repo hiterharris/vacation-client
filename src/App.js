@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Dashboard from './components/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/dashboard">
-            <Dashboard />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
           </Route>
           <Route path="/signup">
             <SignUp />

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/signup.scss';
 
-function SignUp(props) {
+function SignUp() {
   const [newUser, setNewUser] = useState({
     username: '',
     password: ''

@@ -22,14 +22,24 @@ function Nav() {
         }
     }
 
+
+    const dashboardButton = () => {
+      if (localStorage.token) {
+          return <button onClick={() => history.push('/dashboard')}>Dashboard</button>;
+      } else {
+        return null;
+      }
+  }
+
     return (
         <nav className='Nav'>
             <div className='nav-left'>
-                <Link to="/"><img src={logo} /></Link>
+                <Link to="/"><img src={logo} alt='logo' /></Link>
                 <h1>Vacation Planner</h1>
             </div>
             <div className='nav-right'>
                 <ul>
+                    {dashboardButton()}
                     <button onClick={() => history.push('/signup')}>Sign Up</button>
                     {logOutButton()}
                 </ul>
