@@ -9,7 +9,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import Lodging from './components/Lodging';
+import Lodging from './components/features/Lodging';
 import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 

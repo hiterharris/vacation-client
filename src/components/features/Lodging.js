@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/lodging.scss';
+import '../../styles/lodging.scss';
 
 function Lodging() {
   return (

@@ -19,13 +19,32 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <h1>Welcome {user.username}!</h1>
-      <Link className='link' to="/lodging">
-        <div className='dashboard-card'>
-          <h2>Lodging</h2>
-          <div></div>
-        </div>
-      </Link>
-
+      <div className="dashboard-container">
+        <Link className='link' to="">
+          <div className='dashboard-card'>
+            <h2>Travel</h2>
+            <div></div>
+          </div>
+        </Link>
+        <Link className='link' to="/lodging">
+          <div className='dashboard-card'>
+            <h2>Lodging</h2>
+            <div></div>
+          </div>
+        </Link>
+        <Link className='link' to="">
+          <div className='dashboard-card'>
+            <h2>Food</h2>
+            <div></div>
+          </div>
+        </Link>
+        <Link className='link' to="">
+          <div className='dashboard-card'>
+            <h2>Activities</h2>
+            <div></div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

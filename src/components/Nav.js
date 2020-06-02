@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../styles/nav.scss';
-import logo from '../assets/images/logo2.jpg';
+import logo from '../assets/images/sun.png';
 import { useHistory } from 'react-router-dom';
 
 function Nav() {

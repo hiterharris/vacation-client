@@ -1,10 +1,18 @@
 .Dashboard {
     text-align: center;
 
-    .dashboard-card {
-        height: 200px;
-        width: 20%;
-        border: 1px solid black;
-        color: black;
+    .dashboard-container {
+        display: flex;
+
+        .link {
+            margin: 2%;
+        }
+
+        .dashboard-card {
+            width: 20vw;
+            height: 40vh;
+            border: 1px solid black;
+            color: black;
+        }
     }
 }
