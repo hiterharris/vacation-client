@@ -1,3 +1,10 @@
 .Dashboard {
     text-align: center;
+
+    .dashboard-card {
+        height: 200px;
+        width: 20%;
+        border: 1px solid black;
+        color: black;
+    }
 }

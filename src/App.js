@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Lodging from './components/Lodging';
 import Dashboard from './components/Dashboard';
 import PrivateRoute from './components/PrivateRoute';
 
@@ -17,6 +18,9 @@ function App() {
     <Router>
         <Nav />
         <Switch>
+          <Route path="/lodging">
+            <Lodging />
+          </Route>
           <Route path="/dashboard">
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
           </Route>

@@ -63,5 +63,19 @@
 .Dashboard {
   text-align: center;
 }
+.Dashboard .dashboard-card {
+  height: 200px;
+  width: 20%;
+  border: 1px solid black;
+  color: black;
+}
+
+.Lodging {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=App.css.map */
