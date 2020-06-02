@@ -7,11 +7,19 @@ import logo from '../assets/images/logo2.jpg';
 import { useHistory } from 'react-router-dom';
 
 function Nav() {
-    const history = useHistory()
+    const history = useHistory();
 
     const logOut = () => {
         localStorage.clear();
         history.push('/login');
+    }
+
+    const logOutButton = () => {
+        if (localStorage.token) {
+            return <button onClick={() => logOut()}>Log Out</button>;
+        } else {
+            return <button onClick={() => history.push('/login')}>Login</button>;
+        }
     }
 
     return (
@@ -22,13 +30,8 @@ function Nav() {
             </div>
             <div className='nav-right'>
                 <ul>
-                    <li>
-                        <Link to="/login">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/signup">Sign Up</Link>
-                    </li>
-                    <button onClick={() => logOut()}>Log Out</button>
+                    <button onClick={() => history.push('/signup')}>Sign Up</button>
+                    {logOutButton()}
                 </ul>
             </div>
         </nav>

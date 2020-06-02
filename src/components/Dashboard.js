@@ -3,9 +3,7 @@ import React from 'react';
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <h1>Dashboard</h1>
-      <p>{localStorage.message}</p>
-      <button>Log Out</button>
+      <h1>{localStorage.message}</h1>
     </div>
   );
 }

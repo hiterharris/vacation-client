@@ -24,6 +24,7 @@ function Login() {
         console.log(response.data.message);
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('message', response.data.message);
+        localStorage.setItem('id', response.data.id);
         routeToDashboard();
       })
       .catch(error => {
