@@ -1,21 +1,11 @@
-import React, {useEffect} from 'react';
-import axios from 'axios';
-
+import React from 'react';
 
 function Dashboard() {
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/api/users')
-        .then(response => {
-          console.log(response);
-        })
-        .catch(error => {
-          console.log(error)
-        })
-  }, []);
   return (
     <div className="Dashboard">
       <h1>Dashboard</h1>
+      <p>{localStorage.message}</p>
+      <button>Log Out</button>
     </div>
   );
 }

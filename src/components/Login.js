@@ -16,22 +16,14 @@ function Login() {
     });
   }
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   axios
-  //     .post('http://localhost:3001/api/auth/login', user)
-  //       .then(response => {
-  //         console.log(response);
-  //       })
-  // }
-
   const handleSubmit = e => {
     e.preventDefault();
     axios
       .post('http://localhost:3001/api/auth/login', user)
       .then(response => {
-        console.log(response);
+        console.log(response.data.message);
         localStorage.setItem('token', response.data.token);
+        localStorage.setItem('message', response.data.message);
         routeToDashboard();
       })
       .catch(error => {
