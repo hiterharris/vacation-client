@@ -8,15 +8,13 @@
     .nav-left {
         display: flex;
         align-items: center;
+        width: 50%;
 
-        a {
+        .link {
             text-decoration: none;
             color: black;
-
-            // img {
-            //     width: 60%;
-            //     padding: 10% 0% 0% 10%;
-            // }
+            width: 100%;
+            padding: 2% 5%;
         }
 
         h1 {

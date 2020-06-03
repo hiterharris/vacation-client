@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../styles/nav.scss';
-import logo from '../assets/images/sun.png';
 import { useHistory } from 'react-router-dom';
 
 function Nav() {
@@ -39,9 +38,7 @@ function Nav() {
     return (
         <nav className='Nav'>
             <div className='nav-left'>
-                {/* <Link className='link' to="/"><img src={logo} alt='logo' /></Link> */}
                 <Link className='link' to="/"><h1>Vacation Planner</h1></Link>
-                
             </div>
             <div className='nav-right'>
                 <ul>
