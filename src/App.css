@@ -1,10 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+body {
+  margin: 0%;
+}
+
 .Home {
   text-align: center;
   background-image: url("../assets/images/beach.jpg");
   background-size: cover;
   height: 100vh;
   max-width: 100vw;
+  margin-top: -4.75%;
+}
+@media (max-width: 1200px) {
+  .Home {
+    margin-top: -5.75%;
+    background-position: center;
+  }
+}
+@media (max-width: 800px) {
+  .Home {
+    margin-top: -12%;
+    background-position: center;
+  }
 }
 
 .Nav {
@@ -13,16 +30,15 @@
   justify-content: space-between;
 }
 .Nav .nav-left {
-  width: 50%;
   display: flex;
   align-items: center;
+  width: 50%;
 }
-.Nav .nav-left a {
-  width: 15%;
-}
-.Nav .nav-left a img {
-  width: 60%;
-  padding: 10% 0% 0% 10%;
+.Nav .nav-left .link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 2% 5%;
 }
 .Nav .nav-left h1 {
   font-family: "Playball", cursive;
@@ -39,6 +55,10 @@
 }
 .Nav .nav-right ul button {
   margin: 0% 1%;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border: 1px solid white;
 }
 
 .SignUp {
