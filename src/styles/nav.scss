@@ -6,16 +6,17 @@
     justify-content: space-between;
 
     .nav-left {
-        width: 50%;
         display: flex;
         align-items: center;
 
         a {
-            width: 15%;
-            img {
-                width: 60%;
-                padding: 10% 0% 0% 10%;
-            }
+            text-decoration: none;
+            color: black;
+
+            // img {
+            //     width: 60%;
+            //     padding: 10% 0% 0% 10%;
+            // }
         }
 
         h1 {

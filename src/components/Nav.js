@@ -39,8 +39,9 @@ function Nav() {
     return (
         <nav className='Nav'>
             <div className='nav-left'>
-                <Link className='link' to="/"><img src={logo} alt='logo' /></Link>
-                <h1>Vacation Planner</h1>
+                {/* <Link className='link' to="/"><img src={logo} alt='logo' /></Link> */}
+                <Link className='link' to="/"><h1>Vacation Planner</h1></Link>
+                
             </div>
             <div className='nav-right'>
                 <ul>
