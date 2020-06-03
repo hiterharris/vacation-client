@@ -1,24 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import React from 'react';
 import { Link } from "react-router-dom";
+import {connect} from 'react-redux';
+import {fetchUser} from '../actions';
 import '../styles/dashboard.scss';
 
-function Dashboard() {
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-    axiosWithAuth()
-    .get(`/api/users/${localStorage.id}`)
-    .then(response => {
-      setUser(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    })
-  }, []);
-
+function Dashboard(props) {
+  props.fetchUser();
   return (
     <div className="Dashboard">
-      <h1>Welcome {user.username}!</h1>
+      <h1>Welcome {props.user.username}!</h1>
       <div className="dashboard-container">
         <Link className='link' to="">
           <div className='dashboard-card'>
@@ -49,4 +39,13 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  {fetchUser}
+)(Dashboard);
