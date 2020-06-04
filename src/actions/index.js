@@ -35,5 +35,5 @@ export const fetchRestaurants = () => dispatch => {
       .catch(error => {
           console.log('DATA NOT RETURNED', error);
       });
-}, []);
+}, [dispatch]);
 }

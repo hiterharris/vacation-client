@@ -12,28 +12,28 @@ function Dashboard(props) {
       <h1>Welcome {props.user.username}!</h1>
       <div className="dashboard-container">
         <Link className='link' to="">
+          <h2>Travel</h2>
           <div className='dashboard-card'>
-            <h2>Travel</h2>
             <div></div>
           </div>
         </Link>
         <Link className='link' to="/lodging">
+          <h2>Lodging</h2>
           <div className='dashboard-card'>
-            <h2>Lodging</h2>
             <div></div>
           </div>
         </Link>
         <Link className='link' to="/food">
+          <h2>Food</h2>
           <div className='dashboard-card'>
-            <h2>Food</h2>
             <div className='card-image'>
-              <img src={food} />
+              <img src={food} alt="food"/>
             </div>
           </div>
         </Link>
         <Link className='link' to="">
+          <h2>Activities</h2>
           <div className='dashboard-card'>
-            <h2>Activities</h2>
             <div></div>
           </div>
         </Link>
