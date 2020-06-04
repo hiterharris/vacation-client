@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {connect} from 'react-redux';
 import {fetchUser} from '../actions';
 import food from '../assets/images/food.jpg';
+import MyVacation from './MyVacation';
 import '../styles/dashboard.scss';
 
 function Dashboard(props) {
@@ -38,6 +39,7 @@ function Dashboard(props) {
           </div>
         </Link>
       </div>
+      <MyVacation />
     </div>
   );
 }
