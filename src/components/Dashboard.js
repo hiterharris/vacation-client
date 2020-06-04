@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import {connect} from 'react-redux';
 import {fetchUser} from '../actions';
+import food from '../assets/images/food.jpg';
 import '../styles/dashboard.scss';
 
 function Dashboard(props) {
@@ -25,7 +26,9 @@ function Dashboard(props) {
         <Link className='link' to="/food">
           <div className='dashboard-card'>
             <h2>Food</h2>
-            <div></div>
+            <div className='card-image'>
+              <img src={food} />
+            </div>
           </div>
         </Link>
         <Link className='link' to="">
