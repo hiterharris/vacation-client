@@ -1,3 +1,16 @@
 .Food {
     text-align: center;
+
+    .restaurant-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .restaurant-card {
+        width: 25%;
+        img {
+            width: 90%;
+            height: 50%;
+        }
+    }
 }
