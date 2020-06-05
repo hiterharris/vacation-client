@@ -1,12 +1,41 @@
 import React from 'react';
-import '../styles/home.scss';
+import '../styles/vacation.scss';
+import {connect} from 'react-redux';
+import {foodList} from '../actions';
 
-function MyVacation() {
+function MyVacation(props) {
   return (
     <div className="MyVacation">
       <h1>My Vacation</h1>
+      <section className='vacation-container'>
+        <div>
+          <h2>Travel</h2>
+        </div>
+        <div>
+          <h2>Lodging</h2>
+        </div>
+        <div>
+          <h2>Food</h2>
+          <div>
+            <p>Restaurant Name</p>
+            <p>Restaurant Name</p>
+          </div>
+        </div>
+        <div>
+          <h2>Activities</h2>
+        </div>
+      </section>
     </div>
   );
 }
 
-export default MyVacation;
+const mapStateToProps = state => {
+  return {
+    foodList: state.foodList
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  {foodList}
+)(MyVacation);

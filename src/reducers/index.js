@@ -1,6 +1,7 @@
 const initialState = {
     user: [],
-    restaurantList: []
+    restaurantList: [],
+    foodList: []
 }
 
 export const reducer = (state = initialState, action) => {
@@ -14,6 +15,11 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 restaurantList: action.payload
+            }
+        case 'FOOD_LIST':
+            return {
+                ...state,
+                foodList: action.payload
             }
         default:
             return state;

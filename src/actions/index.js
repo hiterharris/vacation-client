@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 export const FETCH_USER_DATA = 'FETCH_USER_DATA';
 export const FETCH_RESTAURANT_DATA = 'FETCH_RESTAURANT_DATA';
+export const FOOD_LIST = 'FOOD_LIST';
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const url = "https://api.yelp.com/v3/businesses/search";
 
@@ -35,5 +36,9 @@ export const fetchRestaurants = () => dispatch => {
       .catch(error => {
           console.log('DATA NOT RETURNED', error);
       });
-}, [dispatch]);
+    }, [dispatch]);
+}
+
+export const foodList = food =>{
+    return {type: 'FOOD_LIST', payload: food}
 }

@@ -1,18 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchRestaurants} from '../../actions';
+import {fetchRestaurants, foodList} from '../../actions';
 import '../../styles/food.scss';
 
 function Food(props) {
-    props.fetchRestaurants()
-    // console.log(props.restaurantList);
+    props.fetchRestaurants();
+    const addItem = (item) => {
+        props.foodList(item);
+    }
     return (
         <div className="Food">
             <h1>Food</h1>
             <div className='restaurant-list'>
             {props.restaurantList.map((restaurant, i) => {
             return (
-                <div className='restaurant-card' key={i}>
+                <div onClick={() => addItem(restaurant.name)} className='restaurant-card' key={i}>
                     <h2>{restaurant.name}</h2>
                     <a href={restaurant.url} target="_blank" rel="noopener noreferrer"><p>Details</p></a>
                     <img src={restaurant.image_url} alt="restaurant"/>
@@ -26,12 +28,13 @@ function Food(props) {
 
 const mapStateToProps = state => {
     return {
-      restaurantList: state.restaurantList
+      restaurantList: state.restaurantList,
+      foodList: state.foodList
     }
   }
   
   export default connect(
     mapStateToProps,
-    {fetchRestaurants}
+    {fetchRestaurants, foodList}
   )(Food);
   
